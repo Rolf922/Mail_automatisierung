@@ -1,0 +1,30 @@
+# Modèle sans secret. Ne pas utiliser avant l'audit et l'accord de l'IT.
+
+[app]
+environment = "company"
+dry_run = true
+timezone = "Europe/Berlin"
+scan_interval_seconds = 600
+nas_path = "\\\\NAS-SERVER\\Pruefprotokolle"
+quarantine_path = "C:\\ProgramData\\Pruefversand\\quarantine"
+filename_pattern = "^(?P<auftragsnummer>[A-Za-z0-9]+)_(?P<description>.+)\\.pdf$"
+maximum_attachment_bytes = 20_000_000
+
+[schedule]
+weekday = 4
+time = "15:00"
+
+[mail]
+provider = "mock"
+mock_outbox_path = "C:\\ProgramData\\Pruefversand\\mock_mail"
+redirect_to = "boite-test-interne@example.invalid"
+allowed_recipient_domains = ["example.invalid"]
+
+[database]
+host = "MYSQL-SERVER"
+port = 3306
+name = "pruefversand"
+user = "pruefversand_app"
+password_env = "MYSQL_PASSWORD"
+require_tls = true
+

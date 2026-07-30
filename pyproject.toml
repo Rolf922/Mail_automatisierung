@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pruefversand"
+version = "0.1.0"
+description = "Envoi hebdomadaire contrôlé de Prüfprotokolle"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "Projet Werkstudent" }]
+dependencies = []
+
+[project.optional-dependencies]
+mysql = ["mysql-connector-python>=9.0,<10"]
+
+[project.scripts]
+pruefversand = "pruefversand.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

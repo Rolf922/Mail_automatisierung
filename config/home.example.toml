@@ -1,0 +1,27 @@
+[app]
+environment = "home"
+dry_run = true
+timezone = "Europe/Berlin"
+scan_interval_seconds = 600
+nas_path = "sample_data/nas_mock"
+quarantine_path = "var/quarantine"
+filename_pattern = "^(?P<auftragsnummer>[A-Za-z0-9]+)_(?P<description>.+)\\.pdf$"
+maximum_attachment_bytes = 20_000_000
+
+[schedule]
+weekday = 4
+time = "15:00"
+
+[mail]
+provider = "mock"
+mock_outbox_path = "var/mock_mail"
+redirect_to = ""
+allowed_recipient_domains = ["example.invalid"]
+
+[database]
+host = "127.0.0.1"
+port = 3307
+name = "pruefversand"
+user = "pruefversand_app"
+password_env = "MYSQL_PASSWORD"
+require_tls = false

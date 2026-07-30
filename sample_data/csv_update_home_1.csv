@@ -1,0 +1,4 @@
+auftragsnummer,baustelle_name,kunde_name,kontakt_name,email,empfaengertyp,aktiv
+00991001,Baustelle CSV Alpha,Kunde Synth HOME,Anna Ausgang,anna.991001@example.invalid,TO,1
+00991002,Baustelle CSV Beta,Kunde Synth HOME,Ben Bestand,ben.991002@example.invalid,TO,1
+00991002,Baustelle CSV Beta,Kunde Synth HOME,Clara Bestand,clara.991002@example.invalid,CC,1

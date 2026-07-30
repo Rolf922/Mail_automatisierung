@@ -1,0 +1,5 @@
+auftragsnummer,baustelle_name,kunde_name,kontakt_name,email,empfaengertyp,aktiv
+00125083,Neubau Musterstadt,Musterbau GmbH,Anna Beispiel,anna.beispiel@example.invalid,TO,1
+126021,Brücke Nord,Beispiel Tiefbau GmbH,Max Mustermann,max.mustermann@example.invalid,TO,1
+126021,Brücke Nord,Beispiel Tiefbau GmbH,Eva Beispiel,eva.beispiel@example.invalid,CC,1
+
